@@ -14,6 +14,10 @@
     rel="stylesheet" />
   <!--Modern normalize-->
   <link rel="stylesheet" href="./css/modern-normalize.css" />
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.css"
+    />
   <!--Custom styles-->
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
@@ -60,8 +64,8 @@
     <!--Замовлення послуг-->
     <section class="hero-section">
       <div class="container">
-        <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="btn hero-btn" type="button">Замовити послугу</button>
+        <h1 class="hero-title">Ефективні рішення для вашого бізнесу </br></h1>
+        <button class="btn hero-btn" type="button" data-modal-open>Замовити послугу</button>
       </div>
     </section>
     <!--Особливості-->
@@ -106,15 +110,15 @@
         <ul class="list work-list position">
           <li class="item work-item">
             <div class="work-thumb">
-            <img class="img" src="./imgwork/img-1.jpg" alt="Розробка продукту" width="370" height="294" /></div>
+            <img class="img" src="./imgwork/img-1.jpg" alt="Розробка продукту" width="370" height="294" /><p class="work-text">Десктопні додатки</p></div>
           </li>
           <li class="item work-item">
             <div class="work-thumb">
-            <img class="img" src="./imgwork/img-2.jpg" alt="Розробка Інтерфейсу" width="370" height="294" /></div>
+            <img class="img" src="./imgwork/img-2.jpg" alt="Розробка Інтерфейсу" width="370" height="294" /><p class="work-text">Мобільні додатки</p></div>
           </li>
           <li class="item work-item">
             <div class="work-thumb">
-            <img class="img" src="./imgwork/img-3.jpg" alt="Стилизація" width="370" height="294" /></div>
+            <img class="img" src="./imgwork/img-3.jpg" alt="Стилизація" width="370" height="294" /><p class="work-text">Дизайнерські рішення</p></div>
           </li>
         </ul>
       </div>
@@ -339,6 +343,18 @@
       </div>
       </footer>
   
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="btn modal-btn" type="button" data-modal-close>
+            <svg class="modal-btn-icon" width="18" height="18">
+              <use href="./img/svg/symbol-defs.svg#icon-close-black"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+  
+      <script src="./js/modal.js"></script>
+
 </body>
 
 </html>
