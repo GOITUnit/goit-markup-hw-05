@@ -598,7 +598,7 @@ p {
   height: 404px;
 
   position: relative;
-  /* outline: 1px solid red */
+  
 }
 
 .portfolio-link {
@@ -621,10 +621,10 @@ p {
 
 .portfolio-thumb-text {
   position: absolute;
-  /* bottom: -100%; */
+ 
   left: 0;
 
-  transition: bottom var(--animation-time) var(--animation-cubic);
+  transition: transform var(--animation-time) var(--animation-cubic);
 
   display: block;
   width: 100%;
@@ -641,7 +641,7 @@ p {
 
 .portfolio-link:hover .portfolio-thumb-text {
   transform: translateY(-101%);
-  /* bottom: 0; */
+
 }
 
 .portfolio-content {
