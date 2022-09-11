@@ -177,6 +177,10 @@ p {
   gap: 30px;
 }
 
+.header-link.active{
+  color: var(--accent-blue);
+}
+
 .header-link {
   position: relative;
 
@@ -197,7 +201,7 @@ p {
   content: '';
 
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   width: 100%;
@@ -344,6 +348,9 @@ p {
 
   background-color: var(--bgc-work-card);
   color: var(--accent-text-cl);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
   text-align: center;
   text-transform: uppercase;
 }
@@ -432,7 +439,8 @@ p {
 
 .customer-link {
   transition: color var(--animation-time) var(--animation-cubic),
-    border var(--animation-time) var(--animation-cubic);
+  border-color: var(--animation-time) var(--animation-cubic);
+  
 
   color: var(--icon-customer);
   display: flex;
@@ -575,6 +583,8 @@ p {
 .portfolio-btn:focus {
   color: var(--accent-text-cl);
   background-color: var(--accent-blue);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* card */
@@ -611,7 +621,7 @@ p {
 
 .portfolio-thumb-text {
   position: absolute;
-  bottom: -100%;
+  /* bottom: -100%; */
   left: 0;
 
   transition: bottom var(--animation-time) var(--animation-cubic);
@@ -626,10 +636,12 @@ p {
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
+  transform: translateY(0);
 }
 
 .portfolio-link:hover .portfolio-thumb-text {
-  bottom: 0;
+  transform: translateY(-101%);
+  /* bottom: 0; */
 }
 
 .portfolio-content {
@@ -655,6 +667,7 @@ p {
 
 /* modal */
 .backdrop {
+  transition: opacity 249ms cubic-bezier(0.4, 0, 0.2, 1), visibility 249ms cubic-bezier(0.4, 0, 0.2, 1);
   position: fixed;
   top: 0;
   left: 0;
@@ -671,6 +684,7 @@ p {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
@@ -689,6 +703,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 
   width: 30px;
   height: 30px;
